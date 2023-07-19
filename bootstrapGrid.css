@@ -1,0 +1,53 @@
+body {
+  background: hsl(250, 90, 74%);
+  width: 100%;
+}
+
+:root {
+  --div-height: 85vh; /* variable */
+  ---bg-size: 100% 100%;
+}
+
+.center_div {
+  width: 85%;
+  margin: 5vh auto;
+  box-shadow: #ff9f0d 0px 1px 25px;
+}
+
+.center_div .top_div {
+  height: calc(var(--div-height) - 40vh);
+  background-size: cover;
+  background-position: center;
+}
+
+.center_div .bottom_first_div {
+  height: calc(var(--div-height) - 50vh);
+  background-size: cover;
+  background-position: center;
+}
+
+.center_div .bottom_sec_div {
+  height: calc(var(--div-height) - 30vh);
+  background-size: cover;
+  background-position: center;
+}
+
+.center_div .top_div:first-child {
+  background-image: url("https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.center_div .top_div:last-child {
+  background-image: url("https://images.pexels.com/photos/3411134/pexels-photo-3411134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.center_div .bottom_first_div {
+  background-image: url("https://images.pexels.com/photos/6898853/pexels-photo-6898853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.center_div .bottom_sec_div:first-child {
+  background-image: url("https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.center_div .bottom_sec_div:last-child {
+  background-image: url("https://images.pexels.com/photos/10215306/pexels-photo-10215306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}

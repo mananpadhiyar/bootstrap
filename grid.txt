@@ -1,0 +1,8 @@
+row => horizontally 
+
+colum => vertically
+
+first 
+create one row => 2 colums 
+
+that 2 colums => that first one left side colums => two row 

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- enable responsiveness in website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<body>
+
+     <!-- 
+        color :
+
+        reddish => danger
+        green => success
+        blue => primary
+        green-blue => info
+        golden-yellow => warning
+        black => dark
+        gray => secondary
+        light-gray => light
+        white => white
+
+        button => btn*color
+        text => text*color
+        background => bg*color
+    
+        container ==> 80% space and margin auto
+        container-fluid ==> will take entire space
+
+        row => 12 grind of equal size         by default row is flex
+        col-1...col-6....col-12
+
+        flex : 
+        d-flex 
+        .flex-row , flex.colum (flex direction)
+        .justify-content-whatever
+        .align-item-whatever
+
+        margin:                                
+        m-0 ... m-5(top,bottom,left,right) 
+        m-0 (0px)             
+        m-1 (4px)
+        m-2 (8px)
+        m-3 (16px)
+        m-4 (32px)
+        m-5 (48px)    
+
+        margin-top => mt
+        margin-bottom => mb
+        margin-left => ms (margin-start)
+        margin-right => me (margin-end)
+        margin-top and bottom => my
+        margin-left and right => mx
+        margin-auto => m-auto
+
+    
+         padding:
+        p-0...p-5  (same pixel size as margin have)
+
+        padding-top => pt
+        padding-bottom => pb
+        padding-left => ps
+        padding-right => pe
+        paddding-top and bottom => py
+        padding-left and right => px
+        p
+
+    -->
+    
+    <h1 class="text-info">Manan Sinh Rajput</h1>
+    
+ 
+    <section class="row justify-content-end">
+        <div class="col-4 bg-info">col-4</div>
+
+        
+    </section>
+
+
+    <!-- typography 
+        h1....h6
+        display-1....display-6
+        bold text  => fw-bold
+        italic text => fst-italic
+        hide element => d-none
+        text alignment => text-center, text-start, text-end
+        fs-1... fs...4 (learn in bootstrap website)
+    -->
+   
+  <section class="container-fluid">
+    <section class="row">
+        <section class="col-3">
+            <h1>this is heading</h1>
+            <h2>this is heading</h2>
+            <h3>this is heading</h3>
+            <h4>this is heading</h4>
+            <h5>this is heading</h5>
+            <h6>this is heading</h6>
+        </section>
+
+        <section class="col-3">
+            <p class="h1">this is paragraph</p>
+            <p class="h2">this is paragraph</p>
+            <p class="h3">this is paragraph</p>
+            <p class="h4">this is paragraph</p>
+            <p class="h5">this is paragraph</p>
+            <p class="h6">this is paragraph</p>
+            <p>this is paragraph</p>
+        </section>
+    </section>
+
+    <section class="row">
+        <section class="col-12">
+            <p class="display-1">this is display-1 text</p>
+            <p class="display-2">this is display-1 text</p>
+            <p class="display-3">this is display-1 text</p>
+            <p class="display-4">this is display-1 text</p>
+            <p class="display-5">this is display-1 text</p>
+            <p class="display-6 fw-bold fst-italic">this is display-1 text</p>
+        </section>
+    </section>
+  </section>
+
+
+
+  <section class="row justify-content-center mt-5">
+ 
+     <section class="col-4 border border-success">
+        
+        <h2 class="text-center mt-3">User Login</h2>
+        
+    <div>
+        <label for="" class="form-label mt-3">Email Adress</label>
+        <input type="email" class="form-control" >
+    </div>
+
+    <div>
+        <label for="" class="form-label mt-3">Enter Password</label>
+        <input type="password" class="form-control" >
+    </div>
+      
+    <div class="d-flex flex-column  mt-3 mb-4">
+       <button class="btn btn-success">Submit</button>
+       <button class="btn btn-danger mt-2">Reset</button>
+    </div>
+     </section>
+     
+  </section>
+
+
+
+
+</body>
+</html>

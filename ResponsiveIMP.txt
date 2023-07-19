@@ -1,0 +1,173 @@
+# various way to achieve responsive design
+
+1. setting up viewport
+
+2. use max-width and max-hight
+
+3. using css media query (see in responsive.html , css)
+
+4. using rem/vh/vw unit over pixels
+
+
+
+## (4) when to use rem and em ? 
+
+Using em and rem units gives us flexibility in our designs, and the ability to scale elements 
+up and down, instead of being stuck with fixed sizes. We can use this flexibility to make our 
+designs easier to adjust during development, more responsive, and to allow browser users to 
+control the overall scale of sites for maximum readability.
+
+Both em and rem units provide this flexibility and work in similar ways, so the big question 
+is, when should we use em values and when should we use rem values?
+
+
+## How rem Units Translate to Pixel Values ?
+
+When using rem units, the pixel size they translate to depends on the font size of the root 
+element of the page, i.e. the html element. That root font size is multiplied by whatever
+number you’re using with your rem unit.
+
+For example, with a root element font size of 16px, 10rem would equate to 160px, 
+i.e. 10 x 16 = 160.
+
+html {
+
+    font-size: 16px
+    padding: 10rem;
+
+}
+
+NOTE : recorded do not use px in room element also means html 
+for simple calculation means whenver i use rem => so i do not get confuse to calculates
+to 16px( by default) so i will set to 10px so that it would be easy to calculates
+rem for that ==> use % ==> 16px == 100% 
+ so 10px == ? 10*100/16 = 62.5% 
+
+
+
+html {
+
+ font-size : 62.5%
+
+}
+
+
+by that now we can easy calculates font-size let say i want 23px so i just need to write
+now 2.3rem
+
+once use all rem than you just need to write one line of code in media query (here only use px)
+
+@media (max-width :998px){
+
+  html {
+
+    font-size : 55%
+  }
+}
+
+1rem ===> 10px ===> 5.5px (wherever i use rem calc like this )
+
+
+@media (max-width :768px){
+
+  html {
+
+    font-size : 45%
+  }
+}
+
+
+
+
+10 X 16 = 160
+
+to check go => inspect => computed
+
+
+## How em Units Translate to Pixel Values?
+
+When using em units, the pixel value you end up with is a multiplication of the font size on
+the element being styled.
+
+For example, if a div has a font size of 18px, 10em would equate to 180px, i.e. 10 x 18 = 180.
+
+div {
+
+    font-size: 18px;
+    padding : 10em
+}
+
+18 x 10 = 180px
+
+
+if you wish to scale the element's size based on its parent's size, use EM
+
+
+REM is relative to the root (HTML) font size, so if you wish to scale the element's 
+size based on the root size, no matter what the parent size is, use REM.
+
+Use rem units unless you're sure you need em units, including font sizes
+
+
+
+## (1) The area that is visible is called the viewport. 
+
+#vw
+View width. 1vw is 1% of the width of the viewport.
+
+For example:
+
+body {
+  width: 100vw;
+}
+Since the body element is set to 100vw, or 100% of the viewport's width, it will take up the 
+full width available to it. So if you resize your browser  to 690 pixels wide, then the body
+will take up all 690 pixels in width.
+
+#vh
+View height. 1vh is 1% of the height of the viewport.
+
+For example:
+
+div {
+  height: 50vh;
+}
+The div will fill 50% of the viewport's height. So if the browser window is 900 pixels high,
+the height of the div will be 450 pixels.
+
+
+width:auto;
+width will never exceed the total width of parent element. Maximum width is it's parent width.
+Even if we add border, padding and margin, content of element itself will become smaller in 
+order to give space for border, padding and margin. In case if space required for border +
+padding + margin is greater than total width of parent element then width of content will 
+become zero.
+
+When we say
+
+width:100%;
+width of content of element will become 100% of parent element and from now if we add border,
+padding or margin then it will cause child element to exceed parent element's width and it 
+will starts overflowing out of parent element.
+
+
+Using width:auto; + display:inline-block; in css giving awesome effect.
+
+width : auto; makes element width auto for adjustment with another object using with 
+display: inline-block; like if we have a div element and another one also div
+element and div elements are block level element so showing them together in
+one line use width: auto; and display:inline-block
+
+
+## (2) CSS height and width Values
+The height and width properties may have the following values:
+
+auto - This is default. The browser calculates the height and width
+length - Defines the height/width in px, cm, etc.
+% - Defines the height/width in percent of the containing block
+initial - Sets the height/width to its default value
+inherit - The height/width will be inherited from its parent value
+
+
+ The min-width specifies the minimum screen width of a specific device, meanwhile, 
+ The max-width media feature states the maximum screen width of a specific device.

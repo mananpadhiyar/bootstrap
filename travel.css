@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  list-style: none;
+}
+
+html,
+body {
+  overflow-y: hidden;
+}
+
+:root {
+  --main--color: #d2f575;
+  --text--white: white;
+  --text--blue: #1d3c5e;
+  --text-light: rgb(231, 219, 219);
+}
+
+/*  */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 14%;
+}
+
+nav ul {
+  display: flex;
+  gap: 5rem;
+}
+
+nav ul li a {
+  font-weight: 400;
+  font-size: 17px;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  height: 5px;
+  background-color: var(--main--color);
+  width: 0%;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+  bottom: -10px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  transition: all 0.5 ease;
+}
+a {
+  text-decoration: none;
+  color: var(--text--white);
+}
+
+.home {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("https://images.pexels.com/photos/3822070/pexels-photo-3822070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.logo a i {
+  font-size: 30px;
+  color: var(--main--color);
+}
+
+.logo a span {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.logo a {
+  font-size: 32px;
+}
+
+header {
+  margin: 120px 14%;
+}
+
+header h1 {
+  color: var(--text--white);
+  font-size: 3.3rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+header p {
+  color: var(--text-light);
+  font-weight: 100;
+  margin: 1.6rem 0;
+  letter-spacing: 1px;
+}
+
+header button {
+  color: var(--text--blue);
+  background-color: var(--main--color);
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.5 ease;
+}
+
+header button i {
+  vertical-align: middle;
+  font-size: 19px;
+  font-weight: bolder;
+  margin-left: 5px;
+}
+
+hr {
+  position: relative;
+  color: var(--text--white);
+  margin: 0 14.2rem;
+  top: 80px;
+  right: 50px;
+}
+
+header button:hover i {
+  transform: scale(1.2);
+}
+
+.header-card {
+  width: 80%;
+  margin: auto;
+  color: var(--text--white);
+  margin-top: 4.8rem;
+}
+.header-card .parent {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  transition: all 0.4s linear;
+}
+
+.header-card .parent .child {
+  /* box-shadow: 0 0 20px #1d3c5e; */
+  /* hori , ver => 0  , bulr all=> 20px */
+  flex: 1 1 200px;
+  height: 300px;
+  margin: 20px;
+  /* 200px width */
+}
+
+.header-card .parent .child span {
+  font-size: 1.8rem;
+}
+
+.header-card .parent .child h3 {
+  margin: 0.6rem 0;
+  font-size: 23px;
+}
+
+.header-card .parent .child p {
+  font-size: 13px;
+  line-height: 1.4rem;
+}
+@media (max-width: 768px) {
+  .header-card {
+    height: auto;
+  }
+
+  html {
+    font-size: 12px;
+  }
+}
+
+.service {
+}
